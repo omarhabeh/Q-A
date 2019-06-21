@@ -1,0 +1,564 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
+        <title>Questions&Answers</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- favicon
+		============================================ -->		
+        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+		
+		<!-- Google Fonts
+		============================================ -->		
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+	   
+		<!-- Bootstrap CSS
+		============================================ -->		
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- font-awesome CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- owl.carousel CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/owl.theme.css">
+        <link rel="stylesheet" href="css/owl.transitions.css">
+		<!-- meanmenu CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/meanmenu.css">
+		<!-- normalize CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/normalize.css">
+		<!-- main CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/main.css">
+		<!-- style CSS
+		============================================ -->
+        <link rel="stylesheet" href="style.css">
+		<!-- responsive CSS
+		============================================ -->
+        <link rel="stylesheet" href="css/responsive.css">
+		<!-- modernizr JS
+		============================================ -->		
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body class="home-2">
+       
+
+        <!-- header-area start -->
+		<header id="header" class="header-area">
+			<div class="header-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<div class="header-top-left">
+								<ul class="social-icons">
+									<li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="https://twitter.com/?lang=tr"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="https://accounts.google.com"><i class="fa fa-google-plus"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<div class="header-top-right fix">
+								<div class="header-links">
+									<ul>
+										<li><a href="login.jsp">Login</a></li>
+										<li><a href="register.jsp">Register</a></li>
+									</ul>
+								</div>
+								<div class="header-search">
+									<form action="single-blog" method="post">
+										<button type="button" class="search-toggler"><i class="fa fa-search"></i></button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- /.header-top -->
+			<div class="header-bottom">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="logo">
+								<a href="index.html"><img src="img/logo/logoson.png" alt="Logo" /></a>
+							</div>
+						</div>
+						<div class="col-md-9">
+							<div class="main-menu">
+								<nav>
+								  <ul class="main-nav navbar-right">
+									<li><a href="index.html">Home</a></li>
+									<li class="dropdown"><a href="single-blog">NEW ADDED</a>
+										<div class="mega-menu">
+											<div class="single-post">
+												<div class="post-img">
+													<a href="single-blog"><img src="img/mega-menu/m11.jpg" alt="" /></a>
+												</div>
+												<h6 class="post-title"><a href="single-blog"> Beethoven And Mozart</a></h6>
+												<p class="post-date">July 10, 2015</p>
+											</div>
+											<div class="single-post">
+												<div class="post-img">
+													<a href="single-blog"><img src="img/mega-menu/m2.jpe" alt="" /></a>
+												</div>
+												<h6 class="post-title"><a href="single-blog"> Image Processing</a></h6>
+												<p class="post-date">August 25, 2015</p>
+											</div>
+											<div class="single-post">
+												<div class="post-img">
+													<a href="single-blog"><img src="img/mega-menu/m3.jpg" alt="" /></a>
+												</div>
+												<h6 class="post-title"><a href="single-blog">  Matt Anderson Joins Modena</a></h6>
+												<p class="post-date">September 5, 2015</p>
+											</div>
+										</div>	
+									</li>
+									<li class="dropdown"><a href="single-blog">ENGINEERING</a>
+										<div class="mega-menu">
+											<div class="single-post">
+												<div class="post-img">
+													<a href="single-blog"><img src="img/mega-menu/1.jpg" alt="" /></a>
+												</div>
+												<h6 class="post-title"><a href="single-blog">Software Engineering</a></h6>
+												<p class="post-date">12.04.2019</p>
+											</div>
+											<div class="single-post">
+												<div class="post-img">
+													<a href="single-blog"><img src="img/mega-menu/2.jpg" alt="" /></a>
+												</div>
+												<h6 class="post-title"><a href="single-blog">Object Oriented Programming</a></h6>
+												<p class="post-date">August 25, 2015</p>
+											</div>
+											<div class="single-post">
+												<div class="post-img">
+													<a href="single-blog"><img src="img/mega-menu/3.jpg" alt="" /></a>
+												</div>
+												<h6 class="post-title"><a href="single-blog">Microprocessors</a></h6>
+												<p class="post-date">September 5, 2015</p>
+											</div>
+										</div>	
+									</li>
+									<li class="dropdown"><a href="single-blog">MEDICAL</a>
+										<div class="mega-menu">
+											<div class="single-post">
+												<div class="post-img">
+													<a href="single-blog"><img src="img/mega-menu/4.jpg" alt="" /></a>
+												</div>
+												<h6 class="post-title"><a href="single-blog">Anatomy</a></h6>
+												<p class="post-date">July 10, 2015</p>
+											</div>
+											<div class="single-post">
+												<div class="post-img">
+													<a href="single-blog"><img src="img/mega-menu/5.jpg" alt="" /></a>
+												</div>
+												<h6 class="post-title"><a href="single-blog">Medical Biochemistry</a></h6>
+												<p class="post-date">August 25, 2015</p>
+											</div>
+											<div class="single-post">
+												<div class="post-img">
+													<a href="single-blog"><img src="img/mega-menu/6.jpg" alt="" /></a>
+												</div>
+												<h6 class="post-title"><a href="single-blog">Cardiology</a></h6>
+												<p class="post-date">September 5, 2015</p>
+											</div>
+										</div>	
+									</li>
+									<li class="dropdown"><a href="single-blog">LAW</a>
+										<div class="mega-menu">
+											<div class="single-post">
+												<div class="post-img">
+													<a href="single-blog"><img src="img/mega-menu/7.jpg" alt="" /></a>
+												</div>
+												<h6 class="post-title"><a href="single-blog">Constitutional Law</a></h6>
+												<p class="post-date">July 10, 2015</p>
+											</div>
+											<div class="single-post">
+												<div class="post-img">
+													<a href="single-blog"><img src="img/mega-menu/8.jpg" alt="" /></a>
+												</div>
+												<h6 class="post-title"><a href="single-blog">Civil Law</a></h6>
+												<p class="post-date">August 25, 2015</p>
+											</div>
+											<div class="single-post">
+												<div class="post-img">
+													<a href="single-blog"><img src="img/mega-menu/9.jpg" alt="" /></a>
+												</div>
+												<h6 class="post-title"><a href="single-blog">Obligations Law</a></h6>
+												<p class="post-date">September 5, 2015</p>
+											</div>
+										</div>	
+									</li>
+									<li class="dropdown"><a href="single-blog">Sport Scienes</a>
+										<div class="mega-menu">
+											<div class="single-post">
+												<div class="post-img">
+													<a href="single-blog"><img src="img/mega-menu/10.jpg" alt="" /></a>
+												</div>
+												<h6 class="post-title"><a href="single-blog">Sports Management</a></h6>
+												<p class="post-date">July 10, 2015</p>
+											</div>
+											<div class="single-post">
+												<div class="post-img">
+													<a href="single-blog"><img src="img/mega-menu/11.jpg" alt="" /></a>
+												</div>
+												<h6 class="post-title"><a href="single-blog">Coaching Education</a></h6>
+												<p class="post-date">August 25, 2015</p>
+											</div>
+											<div class="single-post">
+												<div class="post-img">
+													<a href="single-blog"><img src="img/mega-menu/12.jpg" alt="" /></a>
+												</div>
+												<h6 class="post-title"><a href="single-blog">Physical Education and Sports Teaching </a></h6>
+												<p class="post-date">September 5, 2015</p>
+											</div>
+										</div>	
+									</li>
+									
+								  </ul>
+								</nav>
+							</div><!-- /.main-menu -->
+						</div>
+					</div>
+				</div>
+				
+			</div><!-- /.header-bottom -->
+		</header>
+        <!-- header-area end -->
+		
+		<!-- search-area start -->
+		<div class="search-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="search-form">
+							<span class="search-close"></span>
+							<form action="single-blog" method="post">
+								<input type="text" placeholder="Search here..."/>
+								<button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- search-area end -->
+        
+		<!-- slider-area start -->
+		<div id="slider" class="slider-area">
+			<div id="top-carousel" class="slider-wrap">
+				<div class="single-slide">
+					<a href="single-blog"><img src="img/a.jpg" alt="Slide Image" /></a>
+					<div class="slide-text-container text-center">
+						<h5><a href="single-blog"> Sağlık</a></h5>
+					</div>
+				</div><!-- /.single-slide -->
+				<div class="single-slide">
+					<a href="single-blog"><img src="img/b.jpg" alt="Slide Image" /></a>
+					<div class="slide-text-container text-center">
+						<h5><a href="single-blog"> Discover New Spaces</a></h5>
+					</div>
+				</div><!-- /.single-slide -->
+				<div class="single-slide">
+					<a href="single-blog"><img src="img/c.jpg" alt="Slide Image" /></a>
+					<div class="slide-text-container text-center">
+						<h5><a href="single-blog"> Discover New Spaces</a></h5>
+					</div>
+				</div><!-- /.single-slide -->
+				<div class="single-slide">
+					<a href="single-blog"><img src="img/9.jpg" alt="Slide Image" /></a>
+					<div class="slide-text-container text-center">
+						<h5><a href="single-blog"> Discover New Spaces</a></h5>
+					</div>
+				</div><!-- /.single-slide -->
+				<div class="single-slide">
+					<a href="single-blog"><img src="img/12.jpg" alt="Slide Image" /></a>
+					<div class="slide-text-container text-center">
+						<h5><a href="single-blog"> Discover New Spaces</a></h5>
+					</div>
+				</div><!-- /.single-slide -->
+				<div class="single-slide">
+					<a href="single-blog"><img src="img/4.jpg" alt="Slide Image" /></a>
+					<div class="slide-text-container text-center">
+						<h5><a href="single-blog"> Discover New Spaces</a></h5>
+					</div>
+				</div><!-- /.single-slide -->
+		
+			</div><!-- /single-blogtop-carousel -->
+		</div>
+		<!-- slider-area end -->
+		
+		<!-- main-content-area start -->
+		<div id="main-content" class="main-content-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+						<div class="popular-posts-area">
+							<h2 class="section-title">popular posts</h2>
+							<div class="row">
+								<div class="col-md-6 col-sm-6">
+									<div class="single-popular-post">
+										<div class="post-img">
+											<a href="single-blog"><img src="img/e.jpg" alt="Popular Post" /></a>
+											<a href="single-blog" class="post-tag">technology</a>
+											<div class="post-info">
+												<p>
+													<span class="post-date"><a href="single-blog">April 10, 2019</a></span>
+													<span class="post-comments"><a href="single-blog">3 comments</a></span>
+													<span class="post-social-links">
+														<a class="like" data-toggle="tooltip" data-placement="bottom" title="Likes"><i class="fa fa-heart"></i></a><span class="like-score">0</span>
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="post-content">
+											<h6 class="post-title"><a href="single-blog">Do computers really need to be any faster at this point?</a></h6>
+											<p class="post-short-desc">Not only they do, they actually always will!
+
+												That’s because there are combinatorial optimization problems to solve, 
+												of great practical importance — with literally never-ending need for more computing power to solve them as well 
+												(in terms of solution quality) and as quickly as possible....</p>
+											<a href="single-blog" class="continue-link">Continue Reading...</a>
+										</div>
+									</div><!-- /.single-popular-post -->
+								</div>
+								<div class="col-md-6 col-sm-6">
+									<div class="single-popular-post">
+										<div class="post-img">
+											<a href="single-blog"><img src="img/d.jpg" alt="Popular Post" /></a>
+											<a href="single-blog" class="post-tag">scienes</a>
+											<div class="post-info">
+												<p>
+													<span class="post-date"><a href="single-blog">April 2, 2019</a></span>
+													<span class="post-comments"><a href="single-blog">6 comments</a></span>
+													<span class="post-social-links">
+														<a data-toggle="tooltip" data-placement="bottom" title="Likes"><i class="fa fa-heart"></i></a>
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="post-content">
+											<h6 class="post-title"><a href="single-blog">Does a new genetic analysis finally reveal the identity of Jack the Ripper?</a></h6>
+											<p class="post-short-desc">The tests compared fragments of mitochondrial DNA—the portion of DNA 
+											inherited only from one’s mother—retrieved from the shawl with samples taken from living descendants of Eddowes and Kosminski. 
+											The DNA matches that of a living relative of Kosminki, they conclude in the Journal of Forensic Sciences....</p>
+											<a href="single-blog" class="continue-link">Continue Reading...</a>
+										</div>
+									</div><!-- /.single-popular-post -->
+								</div>
+								<div class="col-md-6 col-sm-6">
+									<div class="single-popular-post">
+										<div class="post-img">
+											<a href="single-blog"><img src="img/f.jpg" alt="Popular Post" /></a>
+											<a href="single-blog" class="post-tag">law</a>
+											<div class="post-info">
+												<p>
+													<span class="post-date"><a href="single-blog">March 21, 2019</a></span>
+													<span class="post-comments"><a href="single-blog">3 comments</a></span>
+													<span class="post-social-links">
+														<a href="single-blog" data-toggle="tooltip" data-placement="bottom" title="Likes"><i class="fa fa-heart"></i></a>
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="post-content">
+											<h6 class="post-title"><a href="single-blog">What Are the Different Tools Criminal Defense Lawyers have Available to Help their Clients?</a></h6>
+											<p class="post-short-desc">A few examples of what a defense attorney can do are exclude evidence.
+											 Suppose the police rummage through your home without a warrant to find illegal material (i.e. drugs)
+											 and then the Police charge you with drug possession. However, your criminal defense attorney can argue that 
+											 the search of your property was unlawful and the evidence can be excluded...</p>
+											<a href="single-blog" class="continue-link">Continue Reading...</a>
+										</div>
+									</div><!-- /.single-popular-post -->
+								</div>
+								<div class="col-md-6 col-sm-6">
+									<div class="single-popular-post">
+										<div class="post-img">
+											<a href="single-blog"><img src="img/g.jpg" alt="Popular Post" /></a>
+											<a href="single-blog" class="post-tag">Sports</a>
+											<div class="post-info">
+												<p>
+													<span class="post-date"><a href="single-blog">March 12, 2019</a></span>
+													<span class="post-comments"><a href="single-blog">4 comments</a></span>
+													<span class="post-social-links">
+														<a href="single-blog" data-toggle="tooltip" data-placement="bottom" title="Likes"><i class="fa fa-heart"></i></a>
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="post-content">
+											<h6 class="post-title"><a href="single-blog"> Beach volleyball is similar to traditional volleyball, the sport it was derived from. What are the basic conditions of beach volleyball?</a></h6>
+											<p class="post-short-desc">Beach volleyball is played by 2 players on a sand court. 
+											Players still have three shots to hit the ball over the net to ground the ball in the opponents' court. 
+											Having only two people instead of six, as in a regular volleyball side increased athleticism required..
+											A player that returns the service has to get into a favourable position so that the second person can set the ball into a good position 
+											for the first player to spike the ball over the net to make it difficult for the opposi...</p>
+											<a href="single-blog" class="continue-link">Continue Reading...</a>
+										</div>
+									</div><!-- /.single-popular-post -->
+								</div>
+							</div>
+						</div><!-- /.popular-posts-area -->
+						
+						
+						<!-- featured-posts-area start -->
+						<div id="featured-post" class="featured-posts-area">
+							<h2 class="section-title">featured posts</h2>
+							<div class="row">
+								<div class="col-md-6 col-sm-6">
+									<div class="single-featured-post">
+										<div class="post-img">
+											<a href="single-blog"><img src="img/h.jpg" alt="Featured Post" /></a>
+											<a href="single-blog" class="post-tag">software Engineering</a>
+											<div class="post-info">
+												<p>
+													<span class="post-date"><a href="single-blog">April 18, 2019</a></span>
+													<span class="post-comments"><a href="single-blog">3 comments</a></span>
+													<span class="post-social-links">
+														<a href="single-blog" data-toggle="tooltip" data-placement="bottom" title="Likes"><i class="fa fa-heart"></i></a>
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="post-content">
+											<h6 class="post-title"><a href="single-blog">Mentions some software analysis & design tools?</a></h6>
+											<p class="post-short-desc">Some of the most important software analysis and designing tools are: Data Flow Diagrams,	Structured Charts, Structu...</p>
+											<a href="single-blog" class="continue-link">Continue Reading...</a>
+										</div>
+									</div><!-- /.single-featured-post -->
+								</div>
+								<div class="col-md-6 col-sm-6">
+									<div class="single-featured-post">
+										<div class="post-img">
+											<a href="single-blog"><img src="img/ı.jpg" alt="Featured Post" /></a>
+											<a href="single-blog" class="post-tag">database</a>
+											<div class="post-info">
+												<p>
+													<span class="post-date"><a href="single-blog">February 10, 2019</a></span>
+													<span class="post-comments"><a href="single-blog">10 comments</a></span>
+													<span class="post-social-links">
+														<a href="single-blog" data-toggle="tooltip" data-placement="bottom" title="Likes"><i class="fa fa-heart"></i></a>
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="post-content">
+											<h6 class="post-title"><a href="single-blog">Advantages and Disadvantages of Stored Procedure?</a></h6>
+											<p class="post-short-desc">Stored procedure can be used as a modular programming – means create once,
+											 store and call for several times whenever required. This supports faster execution instead of executing multiple queries. 
+											 This reduces network traffic and provides better security to the data.Disadvantage is that it can be executed only in the Database and utili...</p>
+											<a href="single-blog" class="continue-link">Continue Reading...</a>
+										</div>
+									</div><!-- /.single-featured-post -->
+								</div>
+								<div class="col-md-6 col-sm-6">
+									<div class="single-featured-post">
+										<div class="post-img">
+											<a href="single-blog"><img src="img/j.jpg" alt="Featured Post" /></a>
+											<a href="single-blog" class="post-tag">Microprocessors</a>
+											<div class="post-info">
+												<p>
+													<span class="post-date"><a href="single-blog">February 2, 2019</a></span>
+													<span class="post-comments"><a href="single-blog">8 comments</a></span>
+													<span class="post-social-links">
+														<a href="single-blog" data-toggle="tooltip" data-placement="bottom" title="Likes"><i class="fa fa-heart"></i></a>
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="post-content">
+											<h6 class="post-title"><a href="single-blog">Explain In Brief The Control And Timing Circuitry Of The 8085.?</a></h6>
+											<p class="post-short-desc">The timing and control circuitry section of the 8085 is responsible for the generation of timing
+												and control signals so that instructions can be executed. The types of signals involved are : 
+												Clock signals, Control signals, Status signals, DMA signals and also the reset section.
+											    It is responsible for the fetching and the decoding of the vario...</p>
+											<a href="single-blog" class="continue-link">Continue Reading...</a>
+										</div>
+									</div><!-- /.single-featured-post -->
+								</div>
+								<div class="col-md-6 col-sm-6">
+									<div class="single-featured-post">
+										<div class="post-img">
+											<a href="single-blog"><img src="img/k.jpg" alt="Featured Post" /></a>
+											<a href="single-blog" class="post-tag">Object Oriented Programming</a>
+											<div class="post-info">
+												<p>
+													<span class="post-date"><a href="single-blog">January 4, 2019</a></span>
+													<span class="post-comments"><a href="single-blog">3 comments</a></span>
+													<span class="post-social-links">
+														<a href="single-blog" data-toggle="tooltip" data-placement="bottom" title="Likes"><i class="fa fa-heart"></i></a>
+													</span>
+												</p>
+											</div>
+										</div>
+										<div class="post-content">
+											<h6 class="post-title"><a href="single-blog">What is the meaning of “IS-A” and “HAS-A” relationship?</a></h6>
+											<p class="post-short-desc">“IS-A” relationship implies inheritance. A sub class object is said to have “IS-A” relationship with the super class or interface. 
+											If class A extends B then A “IS-A” B. It is transitive, that is, if class A extends B and class B extends C then 
+											A “IS-A” C. The “instanceof” operator in java determines the “IS-A” relationship....</p>
+											<a href="single-blog" class="continue-link">Continue Reading...</a>
+										</div>
+									</div><!-- /.single-featured-post -->
+								</div>
+							</div>
+						</div>
+						<!-- featured-posts-area end -->
+					</div>
+					
+					<div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2">
+						<div class="sidebar-area fix">
+							
+						
+					
+								
+							
+						
+						</div><!-- /.sidebar-area -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- main-content-area end -->
+		
+		<!-- footer-area start -->
+		<footer id="footer" class="footer-area text-center">
+			<div class="footer-logo">
+				<a href="#"><img src="img/logo/logoson.png" alt="Footer Logo" /></a>
+			</div>
+			
+		</footer>
+		<!-- footer-area end -->
+		
+		<!-- jquery
+		============================================ -->		
+		<script src="js/vendor/jquery-1.11.3.min.js"></script>
+
+
+		<!-- bootstrap JS
+		============================================ -->		
+        <script src="js/bootstrap.min.js"></script>		
+		<!-- meanmenu JS
+		============================================ -->		
+        <script src="js/jquery.meanmenu.js"></script>
+		<!-- owl.carousel JS
+		============================================ -->		
+        <script src="js/owl.carousel.min.js"></script>
+		<!-- scrollUp JS
+		============================================ -->		
+        <script src="js/jquery.scrollUp.min.js"></script>
+		<!-- plugins JS
+		============================================ -->		
+        <script src="js/plugins.js"></script>
+		<!-- main JS
+		============================================ -->		
+        <script src="js/main.js"></script>
+    </body>
+</html>

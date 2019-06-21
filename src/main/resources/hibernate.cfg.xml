@@ -1,0 +1,26 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd"
+      >
+<hibernate-configuration>
+    <session-factory>
+        <!-- JDBC Database connection settings -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://ec2-46-137-113-157.eu-west-1.compute.amazonaws.com/d2n0d8rq20ictu</property>
+        <property name="hibernate.connection.username">abwysrwkoqkwsv</property>
+        <property name="hibernate.connection.password">57525da41fc4fae096db2295e132bedaface569b627eac8724550af5dc827846</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		 <property name="spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation">true</property>
+        <property name="show_sql">true</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="hbm2ddl.auto">update</property>
+		<property name="hibernate.temp.use_jdbc_metadata_defaults">false</property>
+	<mapping class="hibernate.User"/>
+	<mapping class="hibernate.Comments"/>
+	<mapping class="hibernate.Ques"/>
+	
+    </session-factory>
+	
+</hibernate-configuration>
+
+    
